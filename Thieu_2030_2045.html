@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#1f5f8b"><meta name="mobile-web-app-capable" content="yes">
+<title>Kế hoạch cuộc đời Thiệu</title>
+<style>
+:root{--bg:#f6f5f2;--card:#fff;--ink:#1d1d1b;--mut:#6b6a66;--line:#dedcd6;--acc:#1f5f8b;--acc2:#e7f1fb;--ok:#2e7d32;--warn:#b26a00;--bad:#b3261e;--yel:#fff8d6}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#171716;--card:#222220;--ink:#ecebe6;--mut:#a3a29c;--line:#3a3a36;--acc:#7db7e3;--acc2:#1d2c3a;--ok:#7fcf84;--warn:#f0b35a;--bad:#ff8a80;--yel:#3a3620}}
+:root[data-theme=dark]{--bg:#171716;--card:#222220;--ink:#ecebe6;--mut:#a3a29c;--line:#3a3a36;--acc:#7db7e3;--acc2:#1d2c3a;--ok:#7fcf84;--warn:#f0b35a;--bad:#ff8a80;--yel:#3a3620}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Segoe UI",Arial,sans-serif}
+header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);padding:10px 16px}
+.top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+h1{font-size:18px;margin:0}
+.save{font-size:13px;color:var(--mut)}
+.save b{color:var(--ink)}
+nav{display:flex;gap:4px;flex-wrap:wrap;margin-top:8px}
+nav button{border:1px solid var(--line);background:transparent;color:var(--ink);padding:6px 12px;border-radius:8px;cursor:pointer;font:inherit}
+nav button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+main{max-width:1180px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:14px}
+.card h2{font-size:16px;margin:0 0 8px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.stat{background:var(--acc2);border-radius:10px;padding:12px}
+.stat .n{font-size:24px;font-weight:600}
+.stat .l{color:var(--mut);font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--acc2);font-weight:600}
+.tw{overflow-x:auto}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:6px;padding:4px 6px;max-width:100%}
+input[type=number]{width:96px}input[type=date]{width:140px}
+textarea{width:100%;min-height:44px}
+td input[type=text],td textarea{width:100%}
+.btn{border:1px solid var(--acc);background:var(--acc);color:#fff;border-radius:8px;padding:6px 12px;cursor:pointer;font:inherit}
+.btn.ghost{background:transparent;color:var(--acc)}
+.btn.sm{padding:2px 8px;font-size:13px}
+.btn.del{border-color:var(--bad);color:var(--bad);background:transparent}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--acc)}
+.muted{color:var(--mut);font-size:13px}
+.banner{background:var(--yel);border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin-bottom:12px}
+.ok{color:var(--ok);font-weight:600}.bad{color:var(--bad);font-weight:600}.warn{color:var(--warn);font-weight:600}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.fld{display:flex;flex-direction:column;font-size:13px;color:var(--mut)}
+.fld input,.fld select{color:var(--ink)}
+.two{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+svg text{fill:var(--mut);font-size:11px}
+.tw table{min-width:820px}td textarea{min-width:180px}td input[type=text]{min-width:140px}
+@media (max-width:600px){main{padding:10px}header{position:static}}
+
+:root{--accfill:#1f5f8b;--cdone:#cfead6;--cdoneink:#14532d}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--cdone:#264a31;--cdoneink:#d3f3dc}}
+:root[data-theme=dark]{--cdone:#264a31;--cdoneink:#d3f3dc}
+.btn{background:var(--accfill);border-color:var(--accfill)}.btn.ghost{background:transparent}
+.btn.del{background:transparent}
+nav button{display:inline-flex;align-items:center;gap:6px}
+nav button.on{background:var(--accfill);border-color:var(--accfill)}
+.ic{vertical-align:-3px;flex:none}
+.card{animation:fade .35s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.hi{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:8px;color:#fff;margin-right:8px;vertical-align:middle}
+.card h2{display:flex;align-items:center}
+.h3{font-size:14px;margin:6px 0}
+.hero{position:relative;border-radius:14px;overflow:hidden;margin-bottom:14px;color:#fff;border:1px solid var(--line)}
+.hero svg{display:block}.hero{background:#1b4f7a}@media (max-width:700px){.herotxt{position:static!important;max-width:none!important;padding:12px 14px 0}.hero{display:flex;flex-direction:column}.herotxt{order:-1}.hl{font-size:16px}.hl2{font-size:13px}}
+.hero text{fill:#fff}
+.hl{font-size:13px;font-weight:700;paint-order:stroke;stroke:rgba(0,0,0,.45);stroke-width:3px}
+.hl2{font-size:11px;paint-order:stroke;stroke:rgba(0,0,0,.45);stroke-width:3px}
+.herotxt{position:absolute;left:18px;top:14px;max-width:min(520px,70%);text-shadow:0 1px 6px rgba(0,0,0,.45)}
+.hk{font-size:24px;font-weight:700}.hs{font-size:14px;margin-top:4px}
+.pulse{animation:pulse 1.8s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pulse{0%{transform:scale(.6);opacity:.8}100%{transform:scale(1.8);opacity:0}}
+@media (prefers-reduced-motion:reduce){.pulse,.card{animation:none}.ringarc{transition:none}}
+.stat{display:flex;gap:12px;align-items:center}
+.si{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:12px;color:#fff;flex:none}
+.fbadge{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:8px;color:#fff;margin-bottom:4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{display:inline-flex;gap:4px;align-items:center;border:1px solid var(--line);border-radius:20px;padding:2px 10px;font-size:13px}
+.rings{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-around;margin:10px 0}
+.ringw{text-align:center}.rsub{font-size:12px;color:var(--mut);margin-top:2px;max-width:110px}
+svg text.rt{fill:var(--ink);font-size:20px;font-weight:700}
+svg text.rl{font-size:13px;font-weight:700;stroke:none}
+svg text.tl,svg text.ln,svg text.cl,svg text.bv{fill:var(--ink);font-weight:600}
+svg text.ln{fill:#fff;font-size:11px}
+svg text.cn{fill:#fff;font-size:18px;font-weight:700}
+svg text.cc{fill:var(--ink);font-size:22px;font-weight:700}
+svg text.cl{font-size:12px}
+.ringarc{transition:stroke-dashoffset .8s ease}
+.flow{display:flex;flex-wrap:wrap;gap:0}
+.chev{flex:1 1 150px;min-width:140px;padding:10px 22px 10px 26px;background:var(--acc2);margin-right:-8px;display:flex;flex-direction:column;
+ clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%,16px 50%)}
+.chev:first-child{padding-left:14px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%)}
+.chev b{font-size:13px}.chev span{font-size:12px;opacity:.85}
+.chev.done{background:var(--cdone);color:var(--cdoneink)}
+.chev.now{background:var(--accfill);color:#fff}
+.pri{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.pr{display:flex;gap:10px;align-items:center}
+.legend{display:flex;gap:14px;justify-content:center;font-size:13px;color:var(--mut)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px}
+.two{align-items:start}.gate{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start}
+
+@media (max-width:760px){
+ html{-webkit-text-size-adjust:100%}
+ input,select,textarea{font-size:16px!important;min-height:40px}
+ .btn,nav button{min-height:40px}
+ .top{gap:6px}
+ nav{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;flex-wrap:nowrap;overflow-x:auto;gap:2px;padding:6px 6px calc(6px + env(safe-area-inset-bottom));background:var(--card);border-top:1px solid var(--line);box-shadow:0 -4px 14px rgba(0,0,0,.12);-webkit-overflow-scrolling:touch}
+ nav button{flex:0 0 auto;flex-direction:column;gap:2px;padding:6px 10px;font-size:11px;border:0;border-radius:10px;background:transparent;color:var(--mut)}
+ nav button.on{background:var(--accfill);color:#fff}
+ main{padding-bottom:90px}
+ .card{padding:12px}
+}
+@media (min-width:761px) and (max-width:1100px){main{max-width:none}.two{grid-template-columns:1fr 1fr}}
+
+.dm{display:inline-block;position:relative}
+.dm summary{list-style:none;cursor:pointer}.dm summary::-webkit-details-marker{display:none}
+.dmi{position:absolute;right:0;top:calc(100% + 6px);z-index:60;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:8px;min-width:210px;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.dmi .btn{text-align:left}.dmi p{margin:0;font-size:12px;color:var(--mut)}
+.toast{position:fixed;left:12px;right:12px;bottom:84px;z-index:90;background:#14532d;color:#fff;padding:12px 14px;border-radius:12px;font-size:14px;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+@media (max-width:760px){
+ header{padding:calc(8px + env(safe-area-inset-top)) 12px 8px}
+ h1{font-size:17px}
+ .save{font-size:12px}
+ .tw{overflow:visible}
+ .tw table{min-width:0!important}
+ table,tbody{display:block;width:100%}
+ tr.hrow{display:none}
+ tr{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;margin:0 0 10px;padding:6px 12px}
+ td{display:flex;flex-direction:column;gap:2px;border:0!important;padding:6px 0;width:auto}
+ td[data-label]:not([data-label=""])::before{content:attr(data-label);font-size:12px;color:var(--mut);font-weight:600}
+ td textarea,td input[type=text],td input[type=number],td input[type=date],td select{min-width:0!important;width:100%}
+ td input[type=checkbox]{width:auto}
+ td:empty{display:none}
+ .fld{display:flex;flex-direction:column;width:100%}.fld input,.fld select{width:100%!important}
+ .row{gap:8px}
+ .grid{grid-template-columns:1fr 1fr!important}
+ .stat{padding:10px}.stat .n{font-size:22px}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="top">
+  <h1>Kế hoạch cuộc đời Thiệu</h1>
+  <div class="save" id="saveinfo"></div>
+ </div>
+ <nav id="nav"></nav>
+</header>
+<main id="main"></main>
+<script id="seed" type="application/json">{"meta": {"owner": "Thiệu", "version": 1, "updated": "", "note": "Dữ liệu kế hoạch cuộc đời; chương trình đọc và ghi file này."}, "profile": {"birthYear": 1982, "stopAge": 60, "planAge": 90}, "principles": ["Đạo đức: minh bạch với khách hàng, nhân sự và Hiệp hội; không dùng vị thế để thu phí hay trục lợi.", "Gia đình 2 giờ mỗi ngày, không công việc (14 giờ mỗi tuần).", "Block 4 giờ mỗi ngày cho Việc duy nhất (The One Thing).", "Bỏ bia rượu và các việc xã giao không tạo giá trị."], "goals": [{"id": "g1", "factor": "Thân", "title": "Có số liệu nền sức khỏe; bỏ bia rượu; hoàn thành Ironman 70.3", "metric": "Kết quả khám tổng quát lưu hồ sơ; số ngày không rượu bia mỗi tháng; giờ ngủ, nhịp tim lúc nghỉ, tải tập từ Garmin", "baseline": "", "target": "", "due": "2026-12-31", "status": "todo", "progress": 0, "note": "Khám trước 31/12/2026; thi tháng 5/2027 (chưa có ngày)"}, {"id": "g2", "factor": "Tâm", "title": "Nâng tiếng Anh: thi Aptis và hoàn thành bằng đại học Ngôn ngữ Anh", "metric": "Điểm Aptis (mức do anh chọn); học phần hoàn thành", "baseline": "", "target": "", "due": "2027-03-31", "status": "todo", "progress": 0, "note": "Aptis Quý I/2027 (chưa có ngày); bằng: 2027"}, {"id": "g3", "factor": "Tôi", "title": "Giữ block 4 giờ mỗi ngày cho Việc duy nhất", "metric": "Số ngày đủ block mỗi tuần; một Việc duy nhất cho từng quý", "baseline": "", "target": "", "due": "", "status": "doing", "progress": 0, "note": "Bắt đầu tuần 9/11/2026"}, {"id": "g4", "factor": "Thấu", "title": "Giao tiếp tốt hơn trong tình huống khó", "metric": "Số tình huống đã áp dụng công thức Crucial Conversations và kết quả", "baseline": "", "target": "", "due": "2027-03-31", "status": "todo", "progress": 0, "note": "Hoàn thành chương trình tự học trước Q2/2027"}, {"id": "g5", "factor": "Tiến", "title": "Đưa INNO FIRE qua vòng 7 Hóa để chuyển giao được", "metric": "Tỷ lệ dự án có P&L; hướng dẫn mã dự án đã ban hành; số ngày công ty chạy được khi anh vắng", "baseline": "", "target": "", "due": "2027-03-31", "status": "todo", "progress": 0, "note": "P&L theo dự án chạy từ 1/1/2027 để đủ 12 tháng cho Cổng 1"}, {"id": "g6", "factor": "Tầm", "title": "Chốt tên đề tài tiến sĩ (lĩnh vực quản trị) và đường tới vai trò viện trưởng", "metric": "Đề tài được người hướng dẫn chấp thuận; kế hoạch công bố", "baseline": "", "target": "", "due": "2027-03-31", "status": "todo", "progress": 0, "note": "Phụ thuộc hạn bảo vệ (mục còn mở)"}, {"id": "g7", "factor": "Tiền", "title": "Có hồ sơ tài chính gia đình; biết khoảng cách tới mức đủ và phương án dự phòng bệnh tật", "metric": "Kế hoạch được anh và vợ cùng chốt (dùng tab Tài chính với số thật)", "baseline": "", "target": "", "due": "2027-03-31", "status": "todo", "progress": 0, "note": ""}], "weekly": [], "quarters": [{"label": "Q4/2026", "start": "2026-11-09", "end": "2026-12-31", "focus": "Nền dữ liệu: khám, 4 tuần ghi nền, dựng khung P&L"}, {"label": "Q1/2027", "start": "2027-01-01", "end": "2027-03-31", "focus": "P&L theo dự án và Aptis"}, {"label": "Q2/2027", "start": "2027-04-01", "end": "2027-06-30", "focus": "Ironman 70.3 (thi tháng 5)"}, {"label": "Q3/2027", "start": "2027-07-01", "end": "2027-09-30", "focus": "INNO FIRE: thử vắng 2 tuần"}, {"label": "Q4/2027", "start": "2027-10-01", "end": "2027-12-31", "focus": "Cổng 1: thử vắng 4 tuần, quyết bán hay giữ"}], "known": [{"date": "2026-11-09", "title": "Bắt đầu block 4 giờ và ghi số liệu nền", "note": "4 tuần ghi Garmin và bảng giờ thực tế"}, {"date": "2026-12-06", "title": "Hết 4 tuần ghi nền", "note": "Sau đó mới đặt chỉ tiêu bằng số"}, {"date": "2026-12-31", "title": "Khám tổng quát lưu hồ sơ", "note": "Nói rõ với bác sĩ kế hoạch thi 70.3"}, {"date": "2027-01-01", "title": "P&L theo dự án chạy cho mọi dự án mới", "note": "Hạn muộn nhất để có 12 tháng P&L cho Cổng 1"}, {"date": "2027-03-31", "title": "Aptis (Quý I/2027)", "note": "Chưa có ngày thi cụ thể"}, {"date": "", "title": "Ironman 70.3 (tháng 5/2027)", "note": "Chưa có tên giải và ngày thi; điền ngày khi có"}, {"date": "2027-12-31", "title": "Cổng 1: quyết định bán, giữ hay giữ và thu nhỏ", "short": "Cổng 1", "note": "Cần 12 tháng P&L"}, {"date": "2028-06-30", "title": "Con gái thi tốt nghiệp (khoảng, suy ra)", "short": "Con gái thi", "note": ""}, {"date": "2034-06-30", "title": "Con trai thi tốt nghiệp (khoảng, suy ra)", "short": "Con trai thi", "note": ""}, {"date": "2042-12-31", "title": "Mốc dừng làm việc (60 tuổi)", "short": "Dừng làm việc", "note": "Suy ra từ sinh 1982"}], "gates": [{"title": "Cổng 1 – cuối 2027", "date": "2027-12-31", "decision": "Chưa quyết", "criteria": [{"text": "Đủ 12 tháng P&L theo dự án (từ 1/1/2027)", "done": false}, {"text": "Thử vắng 2 tuần (quý III) và 4 tuần (quý IV) đã hoàn thành", "done": false}, {"text": "Đã đo: tỷ lệ doanh thu định kỳ, doanh thu từ khách do anh giữ, dự án anh trực tiếp làm", "done": false}, {"text": "Đã chạy mô hình tài chính với số thật của anh và vợ", "done": false}, {"text": "Biết ai đứng tên chủ trì thiết kế và ký hồ sơ; rủi ro chuyển giao đã đánh giá", "done": false}, {"text": "Nếu chọn bán: đã tham vấn cố vấn M&A và chuyên gia thuế", "done": false}]}], "steps": [{"name": "Hạt nhân hóa", "task": "Ghi 2 tuần mọi việc chỉ mình anh làm; xếp theo giá trị và rủi ro nếu anh vắng", "metric": "Số việc chỉ anh làm; % giờ dự án anh tự làm; % doanh thu từ khách chỉ anh giữ", "when": "Tháng 11–12/2026", "status": "todo"}, {"name": "Tiêu chuẩn hóa", "task": "Quy trình cho khoảng 10 việc lặp lại nhất; mã dự án; khung P&L; rà soát theo Luật PCCC và CNCH 2024 và Nghị định 50/2024", "metric": "Số quy trình đã viết, đã thử, đã ban hành", "when": "Quý IV/2026 đến quý I/2027", "status": "todo"}, {"name": "Đơn giản hóa", "task": "Bỏ bước không tạo giá trị trong từng quy trình trước khi tự động hóa", "metric": "Thời gian xử lý mỗi dự án trước và sau", "when": "Quý I/2027", "status": "todo"}, {"name": "AI hóa và Tự động hóa", "task": "Đưa Arkon, CadChat, AutoLISP vào quy trình chuẩn; đặt quy tắc dữ liệu khách hàng khi dùng AI", "metric": "Giờ công tiết kiệm mỗi dự án; % hồ sơ qua kiểm tra tự động", "when": "Quý I–II/2027", "status": "todo"}, {"name": "Hiệu quả hóa", "task": "P&L theo dự án và cơ chế lương khoán 40% gắn với kết quả", "metric": "Biên lợi nhuận theo dự án; biên chung so với mức 5% hiện nay", "when": "Từ 1/1/2027", "status": "todo"}, {"name": "Hệ thống hóa", "task": "Bản mô tả vai trò cho từng vị trí; người dự phòng cho mỗi việc quan trọng; dữ liệu nằm trong NAS và hệ thống", "metric": "Số vị trí có người dự phòng", "when": "Quý II–III/2027", "status": "todo"}, {"name": "Cải tiến hóa", "task": "Họp rà hàng tháng: một việc làm tốt hơn, một việc bỏ", "metric": "Số cải tiến đã áp dụng mỗi quý", "when": "Liên tục", "status": "todo"}], "transfer": [], "dataroom": [{"text": "P&L 12 tháng theo dự án", "done": false}, {"text": "Danh mục khách hàng, tỷ lệ doanh thu và ai giữ quan hệ", "done": false}, {"text": "Hợp đồng có cho phép chuyển giao không", "done": false}, {"text": "Quyền sở hữu Arkon, CadChat và mã nguồn", "done": false}, {"text": "Bảng nhân sự với điều khoản giữ người", "done": false}, {"text": "Kết quả thử vắng", "done": false}], "phd": {"enrollYear": null, "topic": "", "deadline": "", "milestones": [{"title": "Chốt đề tài quản trị, người hướng dẫn chấp thuận", "date": "", "status": "todo", "note": "Chờ hạn bảo vệ"}, {"title": "Kế hoạch bài báo theo yêu cầu FTU (ưu tiên bài anh là tác giả chính)", "date": "", "status": "todo", "note": "Chờ quy định FTU"}, {"title": "Thu thập dữ liệu (có thể từ thử nghiệm chuyển giao INNO FIRE, kèm đồng ý và bảo mật)", "date": "", "status": "todo", "note": ""}, {"title": "Nộp đánh giá độc lập", "date": "", "status": "todo", "note": "Tối đa năm nhập học cộng 6"}, {"title": "Bảo vệ cấp cơ sở", "date": "", "status": "todo", "note": ""}]}, "institute": {"type": "Chưa rõ", "status": "Đang lập đề án", "checks": [{"text": "Ít nhất 5 người trình độ đại học trở lên làm việc toàn thời gian", "done": false}, {"text": "Ít nhất 30% số đó có chuyên môn phù hợp", "done": false}, {"text": "Ít nhất 1 tiến sĩ toàn thời gian cho mỗi lĩnh vực đăng ký (nếu là tổ chức nghiên cứu)", "done": false}, {"text": "Người đứng đầu có trình độ và kinh nghiệm quản lý (viện công lập: phải là tiến sĩ)", "done": false}, {"text": "Điều lệ, trụ sở, người đại diện pháp luật, mã lĩnh vực cấp 2", "done": false}, {"text": "Nhân sự toàn thời gian của viện không tính trùng với INNO FIRE", "done": false}], "coi": [{"text": "Công bố việc anh sở hữu hoặc từng điều hành INNO FIRE", "done": false}, {"text": "Viện không đánh giá, thẩm tra hay xếp hạng hồ sơ do INNO FIRE thiết kế", "done": false}, {"text": "Tài khoản và nhân sự tách biệt với INNO FIRE", "done": false}, {"text": "Biểu phí dịch vụ của viện công khai", "done": false}]}, "finance": {"isExample": true, "inputs": {"year": 2026, "stopAge": 60, "planAge": 90, "assets": 4.0, "save": 0.6, "spend": 0.4, "spendAfter": 1.0, "illness": 1.5, "target": 10, "profit": 0.5, "share": 0.9, "cost": 1.0, "saleYear": 2028, "upPct": 0.6, "delay": 2, "taxRate": 0.2, "feePct": 0.05}, "scenarios": [{"mult": 2, "inf": 0.05, "nom": 0.054, "spendMult": 1.2}, {"mult": 3, "inf": 0.04, "nom": 0.059, "spendMult": 1.0}, {"mult": 4, "inf": 0.035, "nom": 0.07, "spendMult": 0.9}]}, "open": [{"text": "Điều kiện và thời điểm bổ nhiệm viện trưởng, sau khi đề án được phê duyệt", "done": false}, {"text": "Tên đề tài cụ thể (lĩnh vực quản trị), năm nhập học và hạn bảo vệ", "done": false}, {"text": "Khoảng cách từ tài sản hiện tại đến mức đủ khoảng 10 tỷ, và phương án dự phòng bệnh tật (dùng tab Tài chính)", "done": false}, {"text": "Ngày thi Aptis cụ thể và tên giải Ironman 70.3 tháng 5/2027", "done": false}, {"text": "Chốt \"10 tỷ\" tính theo tiền hôm nay hay tiền năm dừng làm việc", "done": false}, {"text": "Bạn và vợ đang đóng BHXH thế nào (số năm đã đóng, mức đóng)", "done": false}, {"text": "Ai đứng tên chủ trì thiết kế và ký hồ sơ tại INNO FIRE", "done": false}, {"text": "Viện thuộc loại công lập hay ngoài công lập", "done": false}]}</script>
+<script>
+"use strict";
+const SEED = JSON.parse(document.getElementById('seed').textContent);
+const LS_KEY = 'thieu_plan_data_v1';
+const TABS = [['tong','Tổng quan'],['muctieu','Mục tiêu'],['tuan','Theo dõi tuần'],['lotrinh','Lộ trình và cổng'],['innofire','INNO FIRE'],['tiensi','Tiến sĩ và viện'],['taichinh','Tài chính'],['mo','Việc còn mở']];
+const FACTORS = ['Thân','Tâm','Tôi','Thấu','Tiến','Tầm','Tiền'];
+let data = null, tab = localStorage.getItem('thieu_tab')||'tong';
+let dirHandle = null, saveState = {mode:'tạm trong trình duyệt', last:null, err:null}, saveTimer = null;
+
+/* ---------- helpers ---------- */
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const num = v => { const x = parseFloat(v); return isNaN(x)?0:x; };
+const fmt = (v,d=2) => (isFinite(v)?v:0).toLocaleString('vi-VN',{minimumFractionDigits:d,maximumFractionDigits:d});
+const today = () => new Date();
+const iso = d => d.toISOString().slice(0,10);
+function mondayOf(d){const x=new Date(d);const k=(x.getDay()+6)%7;x.setDate(x.getDate()-k);return iso(new Date(x.getTime()-x.getTimezoneOffset()*60000));}
+function daysTo(s){ if(!s) return null; const t=new Date(s+'T00:00:00'); const n=new Date(); n.setHours(0,0,0,0); return Math.round((t-n)/86400000); }
+function getPath(o,p){return p.split('.').reduce((a,k)=>a==null?a:a[k],o);}
+function setPath(o,p,v){const ks=p.split('.');let a=o;for(let i=0;i<ks.length-1;i++)a=a[ks[i]];a[ks[ks.length-1]]=v;}
+function uid(){return Math.random().toString(36).slice(2,9);}
+
+/* ---------- storage ---------- */
+function idb(){return new Promise((res,rej)=>{const r=indexedDB.open('thieu_plan',1);r.onupgradeneeded=()=>r.result.createObjectStore('kv');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});}
+async function idbGet(k){try{const d=await idb();return await new Promise((res,rej)=>{const q=d.transaction('kv').objectStore('kv').get(k);q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error);});}catch(e){return null;}}
+async function idbSet(k,v){try{const d=await idb();await new Promise((res,rej)=>{const q=d.transaction('kv','readwrite').objectStore('kv').put(v,k);q.onsuccess=()=>res();q.onerror=()=>rej(q.error);});}catch(e){}}
+const hasFS = typeof window.showDirectoryPicker === 'function';
+/* ---------- native (Capacitor / APK) ---------- */
+const CAP=window.Capacitor, NATIVE=!!(CAP&&CAP.isNativePlatform&&CAP.isNativePlatform());
+const NP=n=>(NATIVE&&CAP.Plugins&&CAP.Plugins[n])||null;
+async function nativeRead(name){try{const r=await NP('Filesystem').readFile({path:name,directory:'DATA',encoding:'utf8'});return typeof r.data==='string'?r.data:null;}catch(e){return null;}}
+async function nativeWrite(name,text){await NP('Filesystem').writeFile({path:name,data:text,directory:'DATA',encoding:'utf8',recursive:true});}
+function toast(msg){const d=document.createElement('div');d.className='toast';d.textContent=msg;document.body.appendChild(d);setTimeout(()=>d.remove(),5000);}
+function labelTables(){
+  document.querySelectorAll('#main table').forEach(tb=>{
+    const rows=[...tb.querySelectorAll('tr')]; if(!rows.length) return;
+    const heads=[...rows[0].querySelectorAll('th')].map(h=>h.textContent.trim());
+    if(!heads.length) return;
+    rows[0].classList.add('hrow');
+    rows.slice(1).forEach(r=>[...r.children].forEach((c,i)=>{ if(c.tagName==='TD') c.setAttribute('data-label',heads[i]||''); }));
+  });
+}
+
+
+function normalize(d){
+  const base = JSON.parse(JSON.stringify(SEED));
+  if(!d || typeof d!=='object') return base;
+  for(const k of Object.keys(base)) if(!(k in d)) d[k]=base[k];
+  return d;
+}
+async function writeDir(name,text){
+  const fh = await dirHandle.getFileHandle(name,{create:true});
+  const w = await fh.createWritable(); await w.write(text); await w.close();
+}
+async function saveNow(){
+  data.meta.updated = new Date().toISOString();
+  const text = JSON.stringify(data,null,2);
+  try{ localStorage.setItem(LS_KEY,text); }catch(e){}
+  if(dirHandle){
+    try{ await writeDir('data.json',text); saveState={mode:'thư mục đã chọn',last:new Date(),err:null}; }
+    catch(e){ saveState={mode:'thư mục đã chọn',last:saveState.last,err:'Không ghi được: '+e.message}; }
+  } else if(NATIVE&&NP('Filesystem')){
+    try{ await nativeWrite('data.json',text); saveState={mode:'bộ nhớ máy',last:new Date(),err:null}; }
+    catch(e){ saveState={mode:'trình duyệt (lỗi ghi file)',last:saveState.last,err:'Không ghi được vào bộ nhớ máy: '+e.message}; }
+  } else saveState={mode:'tạm trong trình duyệt',last:new Date(),err:null};
+  paintSave();
+}
+function scheduleSave(){ clearTimeout(saveTimer); saveTimer=setTimeout(saveNow,400); }
+function paintSave(){
+  const el=document.getElementById('saveinfo'); if(!el) return;
+  const wasOpen=!!el.querySelector('details.dm[open]');
+  let h='';
+  if(saveState.err) h+='<span class="bad">'+esc(saveState.err)+'</span> ';
+  h+='Lưu: <b>'+esc(saveState.mode)+'</b>'+(saveState.last?' lúc '+saveState.last.toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'}):'')+' ';
+  h+='<details class="dm"'+(wasOpen?' open':'')+'><summary class="btn sm ghost">Dữ liệu</summary><div class="dmi">';
+  if(hasFS) h+='<button class="btn sm ghost" data-act="pickdir">'+(dirHandle?'Đổi thư mục':'Chọn thư mục dữ liệu')+'</button>';
+  h+='<button class="btn sm ghost" data-act="export">'+(NATIVE?'Sao lưu / chia sẻ file':'Xuất JSON')+'</button><button class="btn sm ghost" data-act="import">Nhập JSON</button><button class="btn sm ghost" data-act="theme">Sáng/Tối</button>';
+  if(NATIVE) h+='<p>Dữ liệu nằm trong bộ nhớ của app. Gỡ app sẽ xóa dữ liệu, hãy sao lưu trước.</p>';
+  h+='</div></details>';
+  el.innerHTML=h;
+}
+async function loadFromDir(){
+  try{
+    const fh = await dirHandle.getFileHandle('data.json');
+    const text = await (await fh.getFile()).text();
+    data = normalize(JSON.parse(text));
+    try{ await writeDir('data.backup.json',text); }catch(e){}
+    saveState={mode:'thư mục đã chọn',last:new Date(),err:null};
+  }catch(e){
+    if(e && e.name==='NotFoundError'){ saveState={mode:'thư mục đã chọn',last:null,err:null}; await saveNow(); }
+    else { saveState.err='Không đọc được data.json: '+e.message; }
+  }
+}
+async function pickDir(){
+  try{
+    dirHandle = await window.showDirectoryPicker({mode:'readwrite'});
+    await idbSet('dir',dirHandle);
+    await loadFromDir(); render();
+  }catch(e){ if(e.name!=='AbortError'){ saveState.err=e.message; paintSave(); } }
+}
+async function init(){
+  let local=null; try{ local=JSON.parse(localStorage.getItem(LS_KEY)||'null'); }catch(e){}
+  data = normalize(local);
+  if(NATIVE&&NP('Filesystem')){
+    let txt=await nativeRead('data.json'), loaded=false;
+    if(txt){ try{ data=normalize(JSON.parse(txt)); loaded=true; }catch(e){ const bk=await nativeRead('data.backup.json'); if(bk){ try{ data=normalize(JSON.parse(bk)); loaded=true; toast('File dữ liệu bị lỗi, đã khôi phục từ bản dự phòng.'); }catch(e2){} } } }
+    if(loaded){ try{ await nativeWrite('data.backup.json',JSON.stringify(data,null,2)); }catch(e){} saveState={mode:'bộ nhớ máy',last:new Date(),err:null}; }
+    else { await saveNow(); toast('Đã tự tạo cơ sở dữ liệu trên máy. Mọi thay đổi được lưu tự động.'); }
+    try{ const A=NP('App'); if(A) A.addListener('backButton',()=>{ if(tab!=='tong'){ tab='tong'; localStorage.setItem('thieu_tab',tab); render(); window.scrollTo(0,0); } else A.exitApp(); }); }catch(e){}
+    try{ const S=NP('StatusBar'); if(S){ S.setBackgroundColor({color:'#1f5f8b'}); S.setStyle({style:'DARK'}); } }catch(e){}
+  }
+  if(hasFS){
+    const h = await idbGet('dir');
+    if(h){
+      try{
+        let p = await h.queryPermission({mode:'readwrite'});
+        if(p==='granted'){ dirHandle=h; await loadFromDir(); }
+        else { saveState.err='Bấm "Chọn thư mục dữ liệu" để cấp lại quyền ghi vào thư mục đã chọn trước đó.'; }
+      }catch(e){}
+    }
+  }
+  render();
+}
+
+/* ---------- finance model (cùng công thức với file Excel) ---------- */
+function annuity(r,N){ return Math.abs(r)<1e-6 ? N : (1-Math.pow(1+r,-N))/r*(1+r); }
+function fin(f,sc){
+  const age = f.year - SEED.profile.birthYear;
+  const n = f.stopAge - age, N = f.planAge - f.stopAge;
+  const stopYear = f.year + n;
+  const real = (1+sc.nom)/(1+sc.inf)-1;
+  const spend = f.spend*f.spendAfter*sc.spendMult;
+  const af = annuity(real,N);
+  const need = spend*af + f.illness;
+  const needNom = need*Math.pow(1+sc.inf,n);
+  const A = f.assets*Math.pow(1+sc.nom,n);
+  const S = Math.abs(sc.nom)<1e-6 ? f.save*n : f.save*(Math.pow(1+sc.nom,n)-1)/sc.nom;
+  const value = f.profit*sc.mult, stake = value*f.share;
+  const tax = f.taxRate*Math.max(0,stake-f.cost), fee = f.feePct*stake;
+  const net = stake-tax-fee, up = net*f.upPct, earn = net-up;
+  const sale = up*Math.pow(1+sc.nom,Math.max(0,stopYear-f.saleYear)) + earn*Math.pow(1+sc.nom,Math.max(0,stopYear-f.saleYear-f.delay));
+  const totNom = A+S+sale, totReal = totNom/Math.pow(1+sc.inf,n);
+  return {n,N,stopYear,real,af,need,needNom,A,S,stake,tax,fee,net,sale,totNom,totReal,
+    gap: totReal-need, gapNoSale: (A+S)/Math.pow(1+sc.inf,n)-need,
+    target10Nom: f.target*Math.pow(1+sc.inf,n),
+    monthly: af? (f.target-f.illness)/af/12*1000 : 0};
+}
+
+/* ---------- visual kit ---------- */
+const COL={'Thân':'#e4572e','Tâm':'#7b5ea7','Tôi':'#1b998b','Thấu':'#3a86c8','Tiến':'#f08a24','Tầm':'#c2417d','Tiền':'#5c9c2e'};
+const FIC={'Thân':'heart','Tâm':'bulb','Tôi':'user','Thấu':'eye','Tiến':'arrow','Tầm':'compass','Tiền':'coin'};
+const IC={
+ home:"M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z",
+ target:"M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM12 6a6 6 0 1 0 0 12 6 6 0 0 0 0-12zM12 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4z",
+ pulse:"M22 12h-4l-3 9L9 3l-3 9H2",
+ flag:"M4 22V4M4 4h13l-2 4 2 4H4",
+ building:"M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 10h.01M15 10h.01",
+ cap:"M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 2 9 2 12 0v-5",
+ coin:"M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM12 7v10M9.5 9.5c0-1 1-1.5 2.5-1.5s2.5.7 2.5 1.7-1 1.5-2.5 1.8-2.5.8-2.5 1.8 1 1.7 2.5 1.7 2.5-.5 2.5-1.5",
+ list:"M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11",
+ heart:"M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z",
+ bulb:"M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z",
+ user:"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z",
+ eye:"M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z",
+ arrow:"M5 12h14M12 5l7 7-7 7",
+ compass:"M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM16 8l-2 6-6 2 2-6z",
+ calendar:"M3 4h18v18H3zM16 2v4M8 2v4M3 10h18",
+ clock:"M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM12 6v6l4 2",
+ moon:"M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z",
+ users:"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8",
+ shield:"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4",
+ mountain:"M3 20l6-10 4 6 3-4 5 8z",
+ folder:"M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z",
+ download:"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3",
+ upload:"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12",
+ sun:"M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4",
+ plus:"M12 5v14M5 12h14",
+ trash:"M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v6M14 11v6",
+ alert:"M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01",
+ flame:"M12 22c4 0 7-3 7-7 0-3-2-5-3-7-1 2-2 3-3 3 0-3-1-6-4-9 0 5-4 7-4 12 0 4 3 8 7 8z",
+ scale:"M12 3v18M5 7h14M5 7l-3 8a4 4 0 0 0 6 0zM19 7l-3 8a4 4 0 0 0 6 0z",
+ gear:"M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z",
+ save:"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2zM17 21v-8H7v8M7 3v5h8"
+};
+function ic(n,s=18){return `<svg class="ic" viewBox="0 0 24 24" width="${s}" height="${s}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${IC[n]||''}"/></svg>`;}
+const h2i=(icn,title,col)=>`<h2><span class="hi" style="background:${col||'var(--accfill)'}">${ic(icn,16)}</span>${title}</h2>`;
+function ring(p,col,label,sub,size=92){
+  const r=40,c=2*Math.PI*r,o=c*(1-Math.max(0,Math.min(100,p))/100);
+  return `<div class="ringw"><svg viewBox="0 0 100 100" width="${size}" height="${size}" role="img" aria-label="${esc(sub)} ${esc(label)}"><circle cx="50" cy="50" r="${r}" fill="none" stroke="var(--line)" stroke-width="10"/><circle cx="50" cy="50" r="${r}" fill="none" stroke="${col}" stroke-width="10" stroke-linecap="round" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${o.toFixed(1)}" transform="rotate(-90 50 50)" class="ringarc"/><text x="50" y="56" text-anchor="middle" class="rt">${label}</text></svg><div class="rsub">${sub}</div></div>`;
+}
+function flow(items){return `<div class="flow">${items.map(i=>`<div class="chev ${i.state||''}"><b>${esc(i.title)}</b><span>${esc(i.sub||'')}</span></div>`).join('')}</div>`;}
+function radar(vals){
+  const cx=160,cy=150,R=92,n=vals.length;
+  const pt=(i,v)=>{const a=-Math.PI/2+i*2*Math.PI/n;return [cx+R*v/100*Math.cos(a),cy+R*v/100*Math.sin(a)];};
+  let g='';
+  [25,50,75,100].forEach(l=>{g+=`<polygon points="${vals.map((_,i)=>pt(i,l).map(x=>x.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="var(--line)"/>`;});
+  vals.forEach(([f,v],i)=>{const [x,y]=pt(i,100),[lx,ly]=pt(i,125);g+=`<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)"/><text x="${lx.toFixed(1)}" y="${(ly+4).toFixed(1)}" text-anchor="middle" class="rl" fill="${COL[f]}">${f}</text>`;});
+  const poly=vals.map(([,v],i)=>pt(i,Math.max(v,3)).map(x=>x.toFixed(1)).join(',')).join(' ');
+  g+=`<polygon points="${poly}" fill="rgba(31,95,139,.25)" stroke="#1f5f8b" stroke-width="2"/>`;
+  vals.forEach(([f,v],i)=>{const [x,y]=pt(i,Math.max(v,3));g+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" fill="${COL[f]}"/>`;});
+  return `<svg viewBox="0 0 320 300" width="100%" style="max-width:340px" role="img" aria-label="Biểu đồ radar tiến độ 7T">${g}</svg>`;
+}
+const SHORT=k=>k.short||((k.title||'').length>14?(k.title||'').slice(0,13)+'…':k.title);
+function hero(){
+  const now=today(), y0=2026, y1=2042;
+  const yf=d=>d.getFullYear()+d.getMonth()/12+(d.getDate()-1)/365;
+  const P=[[40,200],[250,225],[380,50],[760,85]];
+  const bez=t=>{const u=1-t;return [0,1].map(k=>u*u*u*P[0][k]+3*u*u*t*P[1][k]+3*u*t*t*P[2][k]+t*t*t*P[3][k]);};
+  const tOf=d=>Math.max(0,Math.min(1,(yf(d)-y0)/(y1-y0)));
+  const ms=data.known.filter(k=>k.date&&k.date>='2027-12-01').sort((a,b)=>a.date<b.date?-1:1);
+  let flags='';
+  ms.forEach((k,i)=>{const [x,y]=bez(tOf(new Date(k.date+'T00:00:00')));const up=i%2===0;const ty=up?y-30:y+34;
+    flags+=`<line x1="${x}" y1="${y}" x2="${x}" y2="${y-20}" stroke="#fff" stroke-width="2"/><polygon points="${x},${y-20} ${x+14},${y-15} ${x},${y-10}" fill="#ffd166"/><text x="${x}" y="${ty}" text-anchor="${x>700?'end':'middle'}" class="hl">${esc(SHORT(k))}</text><text x="${x}" y="${ty+13}" text-anchor="${x>700?'end':'middle'}" class="hl2">${k.date.slice(0,4)}</text>`;});
+  const [nx,ny]=bez(tOf(now));
+  const left=Math.max(0,data.profile.birthYear+data.profile.stopAge-now.getFullYear());
+  return `<div class="hero"><svg viewBox="0 0 800 260" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Hành trình 2026 đến 2042">
+   <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b4f7a"/><stop offset="1" stop-color="#3aa6a0"/></linearGradient></defs>
+   <rect width="800" height="260" fill="url(#sky)"/>
+   <circle cx="660" cy="62" r="26" fill="#ffd166" opacity=".95"/><circle cx="660" cy="62" r="40" fill="#ffd166" opacity=".18"/>
+   <polygon points="0,260 0,150 90,95 170,160 260,80 360,170 450,110 540,175 640,100 720,160 800,120 800,260" fill="#ffffff" opacity=".16"/>
+   <polygon points="0,260 0,200 110,150 200,205 310,135 420,210 520,160 620,215 720,170 800,205 800,260" fill="#0d3b5c" opacity=".55"/>
+   <path d="M${P[0]} C${P[1]} ${P[2]} ${P[3]}" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round"/>
+   ${flags}
+   <circle cx="${nx}" cy="${ny}" r="14" fill="#fff" opacity=".35" class="pulse"/><circle cx="${nx}" cy="${ny}" r="7" fill="#fff" stroke="#e4572e" stroke-width="3"/>
+   <text x="${nx-12}" y="${ny-18}" text-anchor="end" class="hl">Hôm nay</text>
+  </svg>
+  <div class="herotxt"><div class="hk">Hành trình ${y0} → ${y1}</div><div class="hs">Còn <b>${left}</b> năm tới mốc dừng làm việc. Sức khỏe trước, INNO FIRE chuyển giao được, đạo đức không đánh đổi.</div></div></div>`;
+}
+const PRI_IC=['shield','users','clock','flame'];
+
+/* ---------- views ---------- */
+function progressOf(g){ return g.status==='done'?100:Math.max(0,Math.min(100,num(g.progress))); }
+function qState(q){const t=iso(new Date());return t>q.end?'done':(t>=q.start?'now':'');}
+function viewTong(){
+  const d=data, age=today().getFullYear()-d.profile.birthYear;
+  const g1=d.gates[0]; const dg=g1?daysTo(g1.date):null;
+  const race=d.known.find(k=>/Ironman/i.test(k.title)); const dr=race?daysTo(race.date):null;
+  const total=d.goals.length, done=d.goals.filter(g=>g.status==='done').length;
+  const last=d.weekly.slice().sort((a,b)=>a.week<b.week?1:-1)[0];
+  const byF=FACTORS.map(f=>{const gs=d.goals.filter(g=>g.factor===f);const p=gs.length?gs.reduce((a,g)=>a+progressOf(g),0)/gs.length:0;return [f,p,gs.length];});
+  const open=d.open.filter(o=>!o.done).length;
+  const st=(icn,col,n,l)=>`<div class="stat"><span class="si" style="background:${col}">${ic(icn,20)}</span><div><div class="n">${n}</div><div class="l">${l}</div></div></div>`;
+  return hero()+`<div class="grid">
+   ${st('user','#3a86c8',age,'tuổi hiện tại (sinh '+d.profile.birthYear+')')}
+   ${st('flag','#f08a24',dg==null?'–':dg,'ngày tới Cổng 1 ('+esc(g1?g1.date:'chưa đặt')+')')}
+   ${st('pulse','#e4572e',dr==null?'–':dr,'ngày tới Ironman 70.3'+(race&&race.date?'':' (chưa có ngày thi)'))}
+   ${st('target','#1b998b',done+'/'+total,'mục tiêu 12 tháng đã xong')}
+   ${st('list','#7b5ea7',open,'việc còn mở cần chốt')}
+  </div>
+  <div class="two" style="margin-top:14px">
+   <div class="card">${h2i('compass','Tiến độ theo 7T','#c2417d')}<div style="text-align:center">${radar(byF.map(([f,p])=>[f,p]))}</div>
+    <div class="chips">${byF.map(([f,p,c])=>`<span class="chip" style="border-color:${COL[f]}"><span style="color:${COL[f]}">${ic(FIC[f],14)}</span>${f} ${Math.round(p)}%</span>`).join('')}</div></div>
+   <div class="card">${h2i('pulse','Tuần gần nhất','#e4572e')}${last?`<div class="muted">Tuần bắt đầu ${esc(last.week)}</div>
+     <div class="rings">${ring(num(last.blockDays)/7*100,'#1b998b',last.blockDays+'/7','Ngày đủ block 4 giờ')}${ring(num(last.familyH)/14*100,'#e4572e',last.familyH,'Giờ gia đình (14)')}${ring(num(last.alcFree)/7*100,'#7b5ea7',last.alcFree+'/7','Ngày không rượu bia')}</div>
+     <div class="grid" style="margin-top:6px"><div>${ic('activity' in IC?'pulse':'pulse',14)} Tập: <b>${last.trainH}</b> giờ</div><div>${ic('moon',14)} Ngủ TB: <b>${last.sleepH}</b> giờ</div><div>${ic('heart',14)} Nhịp tim nghỉ: <b>${last.rhr||'–'}</b></div></div>`
+     :'<span class="muted">Chưa có dữ liệu tuần. Vào "Theo dõi tuần" để ghi.</span>'}</div>
+  </div>
+  <div class="card">${h2i('calendar','12 tháng tới: mỗi quý một Việc duy nhất','#1f5f8b')}${flow(d.quarters.map(q=>({title:q.label,sub:q.focus,state:qState(q)})))}</div>
+  <div class="card">${h2i('shield','Nguyên tắc không thương lượng','#1b998b')}<div class="pri">${d.principles.map((p,i)=>`<div class="pr"><span class="si" style="background:#1b998b">${ic(PRI_IC[i%4],18)}</span><span>${esc(p)}</span></div>`).join('')}</div></div>`;
+}
+function viewMuctieu(){
+  const rows=data.goals.map((g,i)=>`<tr style="box-shadow:inset 4px 0 0 ${COL[g.factor]||'var(--line)'}">
+   <td><span class="fbadge" style="background:${COL[g.factor]||'#888'}">${ic(FIC[g.factor]||'target',14)}</span><br><select data-path="goals.${i}.factor">${FACTORS.map(f=>`<option ${g.factor===f?'selected':''}>${f}</option>`).join('')}</select></td>
+   <td><textarea data-path="goals.${i}.title">${esc(g.title)}</textarea></td>
+   <td><textarea data-path="goals.${i}.metric">${esc(g.metric)}</textarea></td>
+   <td><input type="text" data-path="goals.${i}.baseline" value="${esc(g.baseline)}" placeholder="chưa đo"></td>
+   <td><input type="text" data-path="goals.${i}.target" value="${esc(g.target)}" placeholder="đặt sau khi có nền"></td>
+   <td><input type="date" data-path="goals.${i}.due" value="${esc(g.due)}"></td>
+   <td><select data-path="goals.${i}.status"><option value="todo" ${g.status==='todo'?'selected':''}>Chưa làm</option><option value="doing" ${g.status==='doing'?'selected':''}>Đang làm</option><option value="done" ${g.status==='done'?'selected':''}>Xong</option></select><br><input type="number" min="0" max="100" data-type="number" data-path="goals.${i}.progress" value="${esc(g.progress)}"> %<div class="bar" style="margin-top:4px"><i style="width:${progressOf(g)}%;background:${COL[g.factor]||'var(--acc)'}"></i></div></td>
+   <td><textarea data-path="goals.${i}.note">${esc(g.note)}</textarea></td>
+   <td><button class="btn sm del" data-act="del" data-list="goals" data-i="${i}">${ic('trash',14)}</button></td></tr>`).join('');
+  return `<div class="card">${h2i('target','Mục tiêu 12 tháng (đến 11/2027)','#1b998b')}<p class="muted">Mỗi yếu tố 7T một mục tiêu đo được. Cột "Mức nền" điền sau 4 tuần ghi số liệu; chỉ đặt mục tiêu bằng số khi đã có nền.</p>
+   <div class="tw"><table><tr><th>7T</th><th>Mục tiêu</th><th>Chỉ số đo</th><th>Mức nền</th><th>Mục tiêu số</th><th>Hạn</th><th>Trạng thái</th><th>Ghi chú</th><th></th></tr>${rows}</table></div>
+   <p><button class="btn" data-act="add" data-list="goals">${ic('plus',14)} Thêm mục tiêu</button></p></div>`;
+}
+function weekSeries(key,src){return (src||data.weekly).slice().map(w=>({d:w.week||w.date||'',v:num(w[key])})).sort((a,b)=>a.d<b.d?-1:1).map(o=>[o.d,o.v]);}
+function chart(title,key,color,icn,src){
+  const s=weekSeries(key,src).filter(p=>p[1]>0); const W=320,H=130,P=26;
+  if(s.length<2) return `<div class="card">${h2i(icn,title,color)}<span class="muted">Cần ít nhất 2 tuần có số liệu.</span></div>`;
+  const vals=s.map(p=>p[1]); const mn=Math.min(...vals), mx=Math.max(...vals), rg=(mx-mn)||1;
+  const pts=s.map((p,i)=>[P+i*(W-2*P)/(s.length-1), H-P-(p[1]-mn)/rg*(H-2*P)]);
+  const area=`${pts[0][0]},${H-P} ${pts.map(p=>p.join(',')).join(' ')} ${pts[pts.length-1][0]},${H-P}`;
+  return `<div class="card">${h2i(icn,title,color)}<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="${title}"><polygon points="${area}" fill="${color}" opacity=".15"/><polyline fill="none" stroke="${color}" stroke-width="2.5" points="${pts.map(p=>p.join(',')).join(' ')}"/>${pts.map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="3.5" fill="${color}"/>`).join('')}<text x="2" y="${H-P}">${fmt(mn,1)}</text><text x="2" y="${P}">${fmt(mx,1)}</text><text x="${P}" y="${H-6}">${esc(s[0][0])}</text><text x="${W-72}" y="${H-6}">${esc(s[s.length-1][0])}</text></svg></div>`;
+}
+function viewTuan(){
+  const w=data.weekly.slice().sort((a,b)=>a.week<b.week?1:-1);
+  const idx=x=>data.weekly.indexOf(x);
+  const rows=w.map(x=>{const i=idx(x);return `<tr>
+   <td><input type="date" data-path="weekly.${i}.week" value="${esc(x.week)}"></td>
+   ${['blockDays','familyH','trainH','sleepH','rhr','alcFree'].map(k=>`<td><input type="number" step="0.1" data-type="number" data-path="weekly.${i}.${k}" value="${esc(x[k])}"></td>`).join('')}
+   <td><input type="text" data-path="weekly.${i}.note" value="${esc(x.note)}"></td>
+   <td><button class="btn sm del" data-act="del" data-list="weekly" data-i="${i}">${ic('trash',14)}</button></td></tr>`;}).join('');
+  const last=w[0];
+  return `<div class="card">${h2i('pulse','Theo dõi tuần','#e4572e')}<p class="muted">Bốn tuần đầu (từ 9/11/2026) chỉ ghi để lấy mức nền. Nhịp tim nghỉ và giờ ngủ lấy từ Garmin. Ngưỡng giảm tải do anh và huấn luyện viên hoặc bác sĩ đặt sau khi có nền.</p>
+   ${last?`<div class="rings">${ring(num(last.blockDays)/7*100,'#1b998b',last.blockDays+'/7','Block 4 giờ')}${ring(num(last.familyH)/14*100,'#e4572e',last.familyH,'Giờ gia đình / 14')}${ring(num(last.alcFree)/7*100,'#7b5ea7',last.alcFree+'/7','Không rượu bia')}</div>`:''}
+   <p><button class="btn" data-act="addweek">${ic('plus',14)} Thêm tuần này</button></p>
+   <div class="tw"><table><tr><th>Tuần (thứ Hai)</th><th>Ngày đủ block 4 giờ (0–7)</th><th>Giờ gia đình</th><th>Giờ tập</th><th>Giờ ngủ TB</th><th>Nhịp tim nghỉ</th><th>Ngày không rượu bia (0–7)</th><th>Ghi chú</th><th></th></tr>${rows||'<tr><td colspan="9" class="muted">Chưa có tuần nào.</td></tr>'}</table></div></div>
+   <div class="two">${chart('Giờ tập mỗi tuần','trainH','#1f77b4','pulse')}${chart('Giờ ngủ trung bình','sleepH','#6a51a3','moon')}${chart('Nhịp tim lúc nghỉ','rhr','#c0392b','heart')}${chart('Giờ gia đình','familyH','#2e7d32','users')}</div>`;
+}
+function timelineSVG(){
+  const W=1100,H=230,x0=50,x1=W-50, a=new Date('2026-01-01'), b=new Date('2043-01-01');
+  const X=d=>x0+(new Date(d)-a)/(b-a)*(x1-x0), Y=118;
+  let s=`<line x1="${x0}" y1="${Y}" x2="${x1}" y2="${Y}" stroke="var(--line)" stroke-width="6" stroke-linecap="round"/>`;
+  for(let y=2026;y<=2042;y++){const x=X(y+'-01-01');s+=`<line x1="${x}" y1="${Y-6}" x2="${x}" y2="${Y+6}" stroke="var(--mut)"/>${y%2===0?`<text x="${x}" y="${Y+24}" text-anchor="middle">${y}</text>`:''}`;}
+  const nowX=X(iso(new Date()));
+  s+=`<rect x="${x0}" y="${Y-3}" width="${Math.max(0,nowX-x0)}" height="6" rx="3" fill="var(--accfill)"/>`;
+  const items=data.known.filter(k=>k.date&&k.date>='2027-12-01').sort((p,q)=>p.date<q.date?-1:1);
+  items.forEach((k,i)=>{const x=X(k.date);const up=i%2===0;const ty=up?Y-58:Y+62;const gate=/Cổng/.test(k.title);
+    s+=`<line x1="${x}" y1="${Y}" x2="${x}" y2="${up?Y-40:Y+44}" stroke="var(--mut)" stroke-dasharray="3 3"/>`;
+    s+=gate?`<polygon points="${x},${Y-11} ${x+11},${Y} ${x},${Y+11} ${x-11},${Y}" fill="#f08a24" stroke="var(--card)" stroke-width="2"/>`:`<circle cx="${x}" cy="${Y}" r="8" fill="#1b998b" stroke="var(--card)" stroke-width="2"/>`;
+    s+=`<text x="${x}" y="${ty}" text-anchor="middle" class="tl">${esc(SHORT(k))}</text><text x="${x}" y="${ty+14}" text-anchor="middle">${esc(k.date.slice(0,7))}</text>`;});
+  s+=`<line x1="${nowX}" y1="${Y-34}" x2="${nowX}" y2="${Y+34}" stroke="#e4572e" stroke-width="2"/><circle cx="${nowX}" cy="${Y}" r="6" fill="#e4572e" class="pulse"/><text x="${nowX}" y="${Y-40}" text-anchor="middle" fill="#e4572e" class="tl">Hôm nay</text>`;
+  return `<div class="tw"><svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:760px" role="img" aria-label="Đường thời gian 2026 đến 2042">${s}</svg></div>`;
+}
+function viewLotrinh(){
+  const kn=data.known.map((k,i)=>`<tr><td><input type="date" data-path="known.${i}.date" value="${esc(k.date)}"></td><td><input type="text" data-path="known.${i}.title" value="${esc(k.title)}"></td><td><input type="text" data-path="known.${i}.short" value="${esc(k.short||'')}" placeholder="nhãn ngắn"></td><td><input type="text" data-path="known.${i}.note" value="${esc(k.note)}"></td><td>${k.date?(daysTo(k.date)>=0?daysTo(k.date)+' ngày nữa':'<span class="muted">đã qua</span>'):'<span class="warn">chưa có ngày</span>'}</td><td><button class="btn sm del" data-act="del" data-list="known" data-i="${i}">${ic('trash',14)}</button></td></tr>`).join('');
+  const gates=data.gates.map((g,gi)=>{const dn=g.criteria.filter(c=>c.done).length,pc=g.criteria.length?dn/g.criteria.length*100:0;return `<div class="card">${h2i('flag',esc(g.title),'#f08a24')}<div class="gate"><div>${ring(pc,'#f08a24',dn+'/'+g.criteria.length,'Tiêu chí đạt')}</div><div style="flex:1;min-width:240px">
+   <div class="row"><span class="fld">Ngày<input type="date" data-path="gates.${gi}.date" value="${esc(g.date)}"></span><span class="fld">Quyết định<select data-path="gates.${gi}.decision">${['Chưa quyết','Bán','Giữ','Giữ và thu nhỏ','Bán một phần','Chuyển cổ phần dần cho đội khung'].map(o=>`<option ${g.decision===o?'selected':''}>${o}</option>`).join('')}</select></span></div>
+   ${g.criteria.map((c,ci)=>`<div class="row"><label><input type="checkbox" data-type="bool" data-path="gates.${gi}.criteria.${ci}.done" ${c.done?'checked':''}> ${esc(c.text)}</label></div>`).join('')}</div></div></div>`;}).join('');
+  return `<div class="card">${h2i('route' in IC?'flag':'flag','Đường thời gian 2026 → 2042','#1f5f8b')}${timelineSVG()}<p class="muted">Hình thoi cam là cổng quyết định, chấm xanh là mốc gia đình và dừng làm việc. Các mốc gần (2026–2027) nằm ở dòng chảy 4 quý bên dưới.</p></div>
+  <div class="card">${h2i('calendar','12 tháng tới theo quý','#1b998b')}${flow(data.quarters.map(q=>({title:q.label,sub:q.focus,state:qState(q)})))}</div>
+  <div class="card">${h2i('list','Mốc đã biết','#7b5ea7')}<div class="tw"><table><tr><th>Ngày</th><th>Mốc</th><th>Nhãn ngắn</th><th>Ghi chú</th><th>Còn</th><th></th></tr>${kn}</table></div><p><button class="btn" data-act="add" data-list="known">${ic('plus',14)} Thêm mốc</button></p></div>
+  ${gates}<p class="muted">Lộ trình 4 giai đoạn 4H (Hình thành, Hoàn thành, Hoàn thiện, Hoàn hảo) xem trong tài liệu kế hoạch. Chỉ đổi kế hoạch tại cổng hoặc buổi rà quý.</p>`;
+}
+function cycleSVG(){
+  const cx=230,cy=190,R=125,n=data.steps.length, C={todo:'#9aa0a6',doing:'#f0a020',done:'#2e9d57'};
+  const ang=i=>-Math.PI/2+i*2*Math.PI/n, P=i=>[cx+R*Math.cos(ang(i)),cy+R*Math.sin(ang(i))];
+  let s=`<defs><marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="var(--mut)" stroke-width="2"/></marker></defs>`;
+  for(let i=0;i<n;i++){const a1=ang(i)+0.30,a2=ang(i+1)-0.30;const x1=cx+R*Math.cos(a1),y1=cy+R*Math.sin(a1),x2=cx+R*Math.cos(a2),y2=cy+R*Math.sin(a2);
+    s+=`<path d="M${x1.toFixed(1)},${y1.toFixed(1)} A${R},${R} 0 0 1 ${x2.toFixed(1)},${y2.toFixed(1)}" fill="none" stroke="var(--mut)" stroke-width="2" marker-end="url(#arw)"/>`;}
+  data.steps.forEach((st,i)=>{const [x,y]=P(i);const lx=cx+(R+52)*Math.cos(ang(i)),ly=cy+(R+52)*Math.sin(ang(i));const an=Math.abs(Math.cos(ang(i)))<0.2?'middle':(Math.cos(ang(i))>0?'start':'end');const lxx=an==='middle'?lx:(Math.cos(ang(i))>0?x+34:x-34);
+    const parts=st.name.split(' và ');
+    s+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="26" fill="${C[st.status]||C.todo}" stroke="var(--card)" stroke-width="3"/><text x="${x.toFixed(1)}" y="${(y+7).toFixed(1)}" text-anchor="middle" class="cn">${i+1}</text>`;
+    const ty=an==='middle'?(Math.sin(ang(i))<0?y-38:y+46):y-2;
+    parts.forEach((p,k)=>{s+=`<text x="${lxx.toFixed(1)}" y="${(ty+k*14).toFixed(1)}" text-anchor="${an}" class="cl">${esc(p)}${k<parts.length-1?' và':''}</text>`;});});
+  s+=`<text x="${cx}" y="${cy-4}" text-anchor="middle" class="cc">7 Hóa</text><text x="${cx}" y="${cy+16}" text-anchor="middle">vòng lặp liên tục</text>`;
+  return `<svg viewBox="-40 0 540 390" width="100%" style="max-width:560px" role="img" aria-label="Vòng 7 Hóa">${s}</svg>`;
+}
+function ladderSVG(){
+  const steps=[['Anh làm',''],['Làm cùng',''],['Người khác làm','anh duyệt'],['Người khác làm','anh xem ngoại lệ']],cols=['#e4572e','#f08a24','#3a86c8','#2e9d57'];
+  let s='';steps.forEach((t,i)=>{const h=55+i*38,x=14+i*112,y=230-h;s+=`<rect x="${x}" y="${y}" width="104" height="${h}" rx="8" fill="${cols[i]}"/><text x="${x+52}" y="${y+22}" text-anchor="middle" class="ln">${i+1}. ${t[0]}</text>${t[1]?`<text x="${x+52}" y="${y+38}" text-anchor="middle" class="ln">${t[1]}</text>`:''}`;});
+  s+=`<path d="M20,40 L440,40" stroke="var(--mut)" stroke-width="2" marker-end="url(#arw2)" fill="none"/><defs><marker id="arw2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="var(--mut)" stroke-width="2"/></marker></defs><text x="230" y="30" text-anchor="middle">Mỗi việc lên một nấc khi đạt tiêu chí viết sẵn</text>`;
+  return `<svg viewBox="0 0 470 240" width="100%" style="max-width:520px" role="img" aria-label="Thang chuyển giao bốn nấc">${s}</svg>`;
+}
+function viewInno(){
+  const st=(p,v)=>`<select data-path="${p}">${[['todo','Chưa làm'],['doing','Đang làm'],['done','Xong']].map(([a,b])=>`<option value="${a}" ${v===a?'selected':''}>${b}</option>`).join('')}</select>`;
+  const steps=data.steps.map((s,i)=>`<tr><td><b>${i+1}. ${esc(s.name)}</b></td><td><textarea data-path="steps.${i}.task">${esc(s.task)}</textarea></td><td><textarea data-path="steps.${i}.metric">${esc(s.metric)}</textarea></td><td>${esc(s.when)}</td><td>${st('steps.'+i+'.status',s.status)}</td></tr>`).join('');
+  const log=data.transfer.map((t,i)=>`<tr><td><input type="date" data-path="transfer.${i}.date" value="${esc(t.date)}"></td>
+   ${['decisions','ownHoursPct','ownRevPct','absentDays','lateProjects','complaints'].map(k=>`<td><input type="number" step="0.1" data-type="number" data-path="transfer.${i}.${k}" value="${esc(t[k])}"></td>`).join('')}
+   <td><input type="text" data-path="transfer.${i}.note" value="${esc(t.note)}"></td><td><button class="btn sm del" data-act="del" data-list="transfer" data-i="${i}">${ic('trash',14)}</button></td></tr>`).join('');
+  const dr=data.dataroom, drd=dr.filter(c=>c.done).length;
+  return `<div class="two"><div class="card">${h2i('gear','Vòng 7 Hóa','#f08a24')}<div style="text-align:center">${cycleSVG()}</div><div class="legend"><span><i style="background:#9aa0a6"></i>Chưa làm</span><span><i style="background:#f0a020"></i>Đang làm</span><span><i style="background:#2e9d57"></i>Xong</span></div></div>
+  <div class="card">${h2i('users','Thang chuyển giao cho từng việc','#3a86c8')}<div style="text-align:center">${ladderSVG()}</div><p class="muted">Ví dụ tiêu chí lên nấc: ba dự án liên tiếp không phải sửa lại. Thử vắng 2 tuần (quý III/2027) rồi 4 tuần (quý IV/2027).</p></div></div>
+  <div class="card">${h2i('building','7 Hóa cho INNO FIRE','#f08a24')}<div class="tw"><table><tr><th>Bước</th><th>Việc cụ thể</th><th>Chỉ số chuyển giao</th><th>Khi nào</th><th>Trạng thái</th></tr>${steps}</table></div></div>
+  <div class="card">${h2i('pulse','Nhật ký chuyển giao và thử vắng','#3a86c8')}<p class="muted">Ghi mỗi tháng. Mục tiêu bằng số đặt sau khi có mức nền.</p>
+   <div class="tw"><table><tr><th>Ngày</th><th>Quyết định cần đến anh mỗi tuần</th><th>% giờ dự án anh tự làm</th><th>% doanh thu từ khách anh giữ</th><th>Ngày công ty chạy khi anh vắng</th><th>Dự án trễ hạn</th><th>Khiếu nại</th><th>Ghi chú</th><th></th></tr>${log||'<tr><td colspan="9" class="muted">Chưa có bản ghi.</td></tr>'}</table></div>
+   <p><button class="btn" data-act="addtransfer">${ic('plus',14)} Thêm bản ghi</button></p>
+   <div class="two">${chart('Quyết định cần đến anh mỗi tuần','decisions','#e4572e','user',data.transfer)}${chart('% giờ dự án anh tự làm','ownHoursPct','#3a86c8','pulse',data.transfer)}</div></div>
+  <div class="card">${h2i('folder','Bộ hồ sơ cho người mua ('+drd+'/'+dr.length+')','#5c9c2e')}<div class="bar" style="margin-bottom:8px"><i style="width:${dr.length?drd/dr.length*100:0}%;background:#5c9c2e"></i></div>${dr.map((c,i)=>`<div class="row"><label><input type="checkbox" data-type="bool" data-path="dataroom.${i}.done" ${c.done?'checked':''}> ${esc(c.text)}</label></div>`).join('')}</div>`;
+}
+function viewTiensi(){
+  const p=data.phd, ey=num(p.enrollYear);
+  const ms=p.milestones.map((m,i)=>`<tr><td><input type="text" data-path="phd.milestones.${i}.title" value="${esc(m.title)}"></td><td><input type="date" data-path="phd.milestones.${i}.date" value="${esc(m.date)}"></td><td><select data-path="phd.milestones.${i}.status">${[['todo','Chưa làm'],['doing','Đang làm'],['done','Xong']].map(([a,b])=>`<option value="${a}" ${m.status===a?'selected':''}>${b}</option>`).join('')}</select></td><td><input type="text" data-path="phd.milestones.${i}.note" value="${esc(m.note)}"></td><td><button class="btn sm del" data-act="del" data-list="phd.milestones" data-i="${i}">${ic('trash',14)}</button></td></tr>`).join('');
+  const v=data.institute, STG=['Đang lập đề án','Trình Thường vụ Hiệp hội','Trình Bộ Nội vụ và Bộ Công an','Đã phê duyệt','Đã đăng ký tổ chức KH&CN'];
+  const cur=Math.max(0,STG.indexOf(v.status));
+  const phdFlow=flow(p.milestones.map(m=>({title:m.title.length>38?m.title.slice(0,37)+'…':m.title,sub:m.date||'chưa có ngày',state:m.status==='done'?'done':(m.status==='doing'?'now':'')})));
+  const insFlow=flow(STG.map((t,i)=>({title:t,sub:i===cur?'đang ở đây':'',state:i<cur?'done':(i===cur?'now':'')})));
+  const chk=(arr,path)=>arr.map((c,i)=>`<div class="row"><label><input type="checkbox" data-type="bool" data-path="${path}.${i}.done" ${c.done?'checked':''}> ${esc(c.text)}</label></div>`).join('');
+  return `<div class="card">${h2i('cap','Tiến sĩ (FTU, đề tài quản trị)','#7b5ea7')}${phdFlow}
+   <div class="row" style="margin-top:12px"><span class="fld">Năm nhập học<input type="number" data-type="number" data-path="phd.enrollYear" value="${esc(p.enrollYear||'')}"></span>
+   <span class="fld">Tên đề tài<input type="text" style="width:320px" data-path="phd.topic" value="${esc(p.topic)}"></span>
+   <span class="fld">Hạn bảo vệ theo FTU<input type="date" data-path="phd.deadline" value="${esc(p.deadline)}"></span></div>
+   <p>${ey?`${ic('alert',14)} Theo Thông tư 18/2021, tổng thời gian học và nghiên cứu tối đa 6 năm trước khi nộp đánh giá độc lập: hạn nộp muộn nhất là năm <b>${ey+6}</b>. Quy định riêng của FTU có thể chặt hơn.`:`<span class="warn">${ic('alert',14)} Điền năm nhập học để tính hạn nộp tối đa (năm nhập học cộng 6, theo Thông tư 18/2021).</span>`}</p>
+   <div class="tw"><table><tr><th>Mốc</th><th>Ngày</th><th>Trạng thái</th><th>Ghi chú</th><th></th></tr>${ms}</table></div><p><button class="btn" data-act="add" data-list="phd.milestones">${ic('plus',14)} Thêm mốc</button></p></div>
+  <div class="card">${h2i('building','Viện PCCC trực thuộc VFRA (dự kiến)','#c2417d')}${insFlow}
+   <div class="row" style="margin-top:12px"><span class="fld">Loại hình<select data-path="institute.type">${['Chưa rõ','Công lập','Ngoài công lập'].map(o=>`<option ${v.type===o?'selected':''}>${o}</option>`).join('')}</select></span>
+   <span class="fld">Trạng thái đề án<select data-path="institute.status">${STG.map(o=>`<option ${v.status===o?'selected':''}>${o}</option>`).join('')}</select></span></div>
+   <div class="two"><div><h3 class="h3">${ic('list',16)} Điều kiện tổ chức KH&amp;CN</h3><p class="muted">Theo Nghị định 262/2025/NĐ-CP (hiệu lực 14/10/2025, theo bài đăng 20/10/2025). Suy luận, cần xác nhận pháp lý.</p>${chk(v.checks,'institute.checks')}</div>
+   <div><h3 class="h3">${ic('scale',16)} Quy tắc xung đột lợi ích (đề xuất)</h3>${chk(v.coi,'institute.coi')}</div></div></div>`;
+}
+function barsSVG(res,sc){
+  const W=520,H=250,base=205,names=['Thận trọng','Cơ sở','Lạc quan'];
+  const mx=Math.max(...res.map(r=>Math.max(r.need,r.totReal)))*1.15||1;
+  let s=`<line x1="30" y1="${base}" x2="${W-10}" y2="${base}" stroke="var(--line)"/>`;
+  res.forEach((r,i)=>{const gx=50+i*160, hN=r.need/mx*(base-30), hA=r.totReal/mx*(base-30);
+    s+=`<rect x="${gx}" y="${base-hN}" width="56" height="${hN}" rx="5" fill="#e4572e"/><text x="${gx+28}" y="${base-hN-5}" text-anchor="middle" class="bv">${fmt(r.need,1)}</text>`;
+    s+=`<rect x="${gx+62}" y="${base-hA}" width="56" height="${hA}" rx="5" fill="#2e9d57"/><text x="${gx+90}" y="${base-hA-5}" text-anchor="middle" class="bv">${fmt(r.totReal,1)}</text>`;
+    s+=`<text x="${gx+59}" y="${base+18}" text-anchor="middle">${names[i]}</text><text x="${gx+59}" y="${base+34}" text-anchor="middle" fill="${r.gap>=0?'#2e9d57':'#e4572e'}" class="bv">${r.gap>=0?'đủ':'thiếu'} ${fmt(Math.abs(r.gap),1)}</text>`;});
+  s+=`<rect x="40" y="6" width="12" height="12" fill="#e4572e" rx="3"/><text x="58" y="16">Vốn cần (tiền hôm nay, tỷ)</text><rect x="240" y="6" width="12" height="12" fill="#2e9d57" rx="3"/><text x="258" y="16">Tài sản dự kiến (tiền hôm nay, tỷ)</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="So sánh vốn cần và tài sản dự kiến theo kịch bản">${s}</svg>`;
+}
+function saleBars(res,f){
+  const names=['Thận trọng','Cơ sở','Lạc quan'];
+  return res.map((r,i)=>{const p=f.target?r.net/f.target*100:0;return `<div class="row" style="margin-bottom:6px"><div style="width:90px">${names[i]}</div><div class="bar" style="flex:1;min-width:140px;height:14px"><i style="width:${Math.min(100,p)}%;background:#f08a24"></i></div><div style="width:130px" class="muted">${fmt(r.net)} tỷ (${fmt(p,0)}%)</div></div>`;}).join('');
+}
+function viewTaichinh(){
+  const f=data.finance.inputs, sc=data.finance.scenarios;
+  const fld=(k,l,step)=>`<span class="fld">${l}<input type="number" step="${step||'any'}" data-type="number" data-fin="1" data-path="finance.inputs.${k}" value="${esc(f[k])}"></span>`;
+  const res=sc.map(s=>fin(f,s));
+  const rowF=(label,fn)=>`<tr><td>${label}</td>${res.map(r=>`<td>${fn(r)}</td>`).join('')}</tr>`;
+  const scIn=(k,l,step)=>`<tr><td>${l}</td>${sc.map((s,i)=>`<td><input type="number" step="${step}" data-type="number" data-fin="1" data-path="finance.scenarios.${i}.${k}" value="${esc(s[k])}"></td>`).join('')}</tr>`;
+  const sens=[0.3,0.4,0.5,0.6,0.8], rates=[0,0.01,0.02,0.03], N=f.planAge-f.stopAge;
+  return `${data.finance.isExample?`<div class="banner">${ic('alert',16)} <b>Các số tài chính đang là VÍ DỤ</b> (chưa phải số thật của anh và vợ). Thay bằng số thật; khi anh sửa bất kỳ ô nào, dòng này sẽ biến mất.</div>`:''}
+  <div class="two"><div class="card">${h2i('scale','Vốn cần và tài sản dự kiến','#5c9c2e')}${barsSVG(res,sc)}</div>
+  <div class="card">${h2i('coin','Bán công ty chiếm bao nhiêu % mức "đủ"','#f08a24')}${saleBars(res,f)}<p class="muted">Tiền ròng sau thuế và chi phí so với mức đủ anh nêu. Phần lớn mức đủ phải đến từ chi tiêu, lãi thực và tiết kiệm, không phải từ thương vụ bán.</p></div></div>
+  <div class="card">${h2i('coin','Nhập liệu (tỷ đồng)','#5c9c2e')}
+   <div class="row">${fld('year','Năm hiện tại')}${fld('stopAge','Tuổi dừng làm việc')}${fld('planAge','Lập kế hoạch tới tuổi')}${fld('assets','Tài sản ngoài công ty')}${fld('save','Tiết kiệm thêm mỗi năm (danh nghĩa)')}${fld('spend','Chi tiêu gia đình mỗi năm (tiền hôm nay)')}${fld('spendAfter','Hệ số chi tiêu sau dừng')}${fld('illness','Dự phòng bệnh tật (tiền hôm nay)')}${fld('target','Mức "đủ" anh nêu')}</div>
+   <div class="row">${fld('profit','Lợi nhuận ròng INNO FIRE mỗi năm')}${fld('share','Tỷ lệ cổ phần (0–1)')}${fld('cost','Giá vốn phần cổ phần')}${fld('saleYear','Năm bán')}${fld('upPct','Tỷ lệ nhận ngay (0–1)')}${fld('delay','Năm chờ earnout')}${fld('taxRate','Thuế suất lãi chuyển nhượng')}${fld('feePct','Chi phí cố vấn (0–1)')}</div></div>
+  <div class="card">${h2i('scale','Ba kịch bản','#3a86c8')}<div class="tw"><table><tr><th></th><th>Thận trọng</th><th>Cơ sở</th><th>Lạc quan</th></tr>
+   ${scIn('mult','Bội số lợi nhuận khi bán','0.5')}${scIn('inf','Lạm phát (0.04 = 4%)','0.005')}${scIn('nom','Lãi danh nghĩa (0.059 = 5,9%)','0.005')}${scIn('spendMult','Nhân hệ số chi tiêu','0.05')}
+   ${rowF('Lãi thực',r=>fmt(r.real*100,2)+'%')}
+   ${rowF('<b>Vốn cần (tiền hôm nay)</b>',r=>'<b>'+fmt(r.need)+'</b>')}
+   ${rowF('Vốn cần (tiền danh nghĩa năm dừng)',r=>fmt(r.needNom))}
+   ${rowF('Tiền ròng bán công ty (danh nghĩa)',r=>fmt(r.net))}
+   ${rowF('Tổng tài sản dự kiến (tiền hôm nay)',r=>fmt(r.totReal))}
+   ${rowF('<b>Chênh lệch (tiền hôm nay)</b>',r=>`<b class="${r.gap>=0?'ok':'bad'}">${fmt(r.gap)} ${r.gap>=0?'(đủ)':'(thiếu)'}</b>`)}
+   ${rowF('Chênh lệch nếu không bán công ty',r=>`<span class="${r.gapNoSale>=0?'ok':'bad'}">${fmt(r.gapNoSale)}</span>`)}
+   ${rowF('Mức đủ anh nêu, quy ra tiền năm dừng',r=>fmt(r.target10Nom))}
+   ${rowF('Chi tiêu tháng mức đủ cho phép (triệu)',r=>fmt(r.monthly,0))}
+  </table></div><p class="muted">Cùng công thức với file Excel Mo_hinh_tai_chinh_thoat_von.xlsx. Giới hạn: tiết kiệm cố định theo số danh nghĩa; chưa tính thuế lãi tiết kiệm, lương hưu BHXH, học phí con; dự phòng bệnh tật gộp một lần; thuế bán công ty áp một lần.</p></div>
+  <div class="card">${h2i('coin','Vốn cần theo chi tiêu và lãi thực (tỷ đồng, tiền hôm nay, '+N+' năm chi)','#5c9c2e')}<div class="tw"><table><tr><th>Chi tiêu/năm \\ Lãi thực</th>${rates.map(r=>`<th>${r*100}%</th>`).join('')}</tr>${sens.map(s=>`<tr><td>${s}</td>${rates.map(r=>`<td>${fmt(s*annuity(r,N))}</td>`).join('')}</tr>`).join('')}</table></div></div>`;
+}
+function viewMo(){
+  const dn=data.open.filter(o=>o.done).length;
+  return `<div class="card">${h2i('list','Việc còn mở cần anh chốt ('+dn+'/'+data.open.length+')','#7b5ea7')}<div class="bar" style="margin-bottom:8px"><i style="width:${data.open.length?dn/data.open.length*100:0}%;background:#7b5ea7"></i></div>${data.open.map((o,i)=>`<div class="row"><label><input type="checkbox" data-type="bool" data-path="open.${i}.done" ${o.done?'checked':''}> <span style="${o.done?'text-decoration:line-through;color:var(--mut)':''}">${esc(o.text)}</span></label><button class="btn sm del" data-act="del" data-list="open" data-i="${i}">${ic('trash',14)}</button></div>`).join('')}
+  <div class="row"><input type="text" id="newopen" style="flex:1;min-width:200px" placeholder="Thêm việc mới"><button class="btn" data-act="addopen">${ic('plus',14)} Thêm</button></div></div>`;
+}
+const VIEWS={tong:viewTong,muctieu:viewMuctieu,tuan:viewTuan,lotrinh:viewLotrinh,innofire:viewInno,tiensi:viewTiensi,taichinh:viewTaichinh,mo:viewMo};
+const TABIC={tong:'home',muctieu:'target',tuan:'pulse',lotrinh:'flag',innofire:'building',tiensi:'cap',taichinh:'coin',mo:'list'};
+function render(){
+  document.getElementById('nav').innerHTML=TABS.map(([k,l])=>`<button data-tab="${k}" class="${tab===k?'on':''}">${ic(TABIC[k],16)}<span>${l}</span></button>`).join('');
+  document.getElementById('main').innerHTML=(VIEWS[tab]||viewTong)();
+  paintSave(); labelTables();
+}
+
+/* ---------- events ---------- */
+function newItem(list){
+  const t={
+    goals:()=>({id:uid(),factor:'Tiến',title:'',metric:'',baseline:'',target:'',due:'',status:'todo',progress:0,note:''}),
+    known:()=>({date:'',title:'',note:''}),
+    'phd.milestones':()=>({title:'',date:'',status:'todo',note:''})}[list];
+  return t();
+}
+document.addEventListener('click',async e=>{
+  const t=e.target.closest('button'); if(!t) return;
+  if(t.dataset.tab){ tab=t.dataset.tab; localStorage.setItem('thieu_tab',tab); render(); return; }
+  const a=t.dataset.act; if(!a) return;
+  const dm=t.closest('details.dm'); if(dm) dm.removeAttribute('open');
+  if(a==='pickdir'){ await pickDir(); return; }
+  if(a==='theme'){ const r=document.documentElement; const cur=r.dataset.theme|| (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'); r.dataset.theme=cur==='dark'?'light':'dark'; return; }
+  if(a==='export' && NATIVE && NP('Share') && NP('Filesystem')){
+    try{ const nm='Thieu_data_'+iso(new Date())+'.json'; const r=await NP('Filesystem').writeFile({path:nm,data:JSON.stringify(data,null,2),directory:'CACHE',encoding:'utf8'}); await NP('Share').share({title:'Sao lưu kế hoạch Thiệu',files:[r.uri],dialogTitle:'Lưu hoặc gửi file sao lưu'}); }
+    catch(err){ if(!/cancel/i.test(String(err&&err.message))) alert('Không chia sẻ được: '+(err&&err.message)); }
+    return; }
+  if(a==='export'){ const b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}); const l=document.createElement('a'); l.href=URL.createObjectURL(b); l.download='data.json'; l.click(); setTimeout(()=>URL.revokeObjectURL(l.href),1000); return; }
+  if(a==='import'){ const i=document.createElement('input'); i.type='file'; i.accept='.json,application/json'; i.onchange=async()=>{ try{ const tx=await i.files[0].text(); data=normalize(JSON.parse(tx)); await saveNow(); render(); }catch(err){ alert('File JSON không hợp lệ: '+err.message); } }; i.click(); return; }
+  if(a==='add'){ getPath(data,t.dataset.list).push(newItem(t.dataset.list)); }
+  else if(a==='del'){ const L=getPath(data,t.dataset.list); const i=+t.dataset.i; if(confirm('Xóa dòng này?')) L.splice(i,1); else return; }
+  else if(a==='addweek'){ const wk=mondayOf(new Date()); if(!data.weekly.some(w=>w.week===wk)) data.weekly.push({week:wk,blockDays:0,familyH:0,trainH:0,sleepH:0,rhr:0,alcFree:0,note:''}); }
+  else if(a==='addtransfer'){ data.transfer.push({date:iso(new Date()),decisions:0,ownHoursPct:0,ownRevPct:0,absentDays:0,lateProjects:0,complaints:0,note:''}); }
+  else if(a==='addopen'){ const v=document.getElementById('newopen').value.trim(); if(!v) return; data.open.push({text:v,done:false}); }
+  scheduleSave(); render();
+});
+document.addEventListener('change',e=>{
+  const el=e.target; const p=el.dataset&&el.dataset.path; if(!p) return;
+  let v = el.dataset.type==='bool' ? el.checked : el.dataset.type==='number' ? num(el.value) : el.value;
+  if(p==='phd.enrollYear' && !v) v=null;
+  setPath(data,p,v);
+  if(el.dataset.fin) data.finance.isExample=false;
+  scheduleSave();
+  const rerender = el.dataset.fin || /\.(status|factor|progress|week|enrollYear|type)$/.test(p) || el.dataset.type==='bool' || p.startsWith('gates') || p.startsWith('known');
+  if(rerender){ const y=window.scrollY; render(); window.scrollTo(0,y); }
+});
+window.addEventListener('beforeunload',()=>{ try{ localStorage.setItem(LS_KEY,JSON.stringify(data)); }catch(e){} });
+init();
+</script>
+</body>
+</html>
